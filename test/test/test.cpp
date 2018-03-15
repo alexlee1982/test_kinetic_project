@@ -44,12 +44,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 
 
-	joint[0] = 80 ;
+	joint[0] = 89 ;
 	joint[1] = 89 ;
-	joint[2] = 120 ;
-	joint[3] = 120;
-	joint[4] = 120;
-	joint[5] = 120;
+	joint[2] = 0;
+	joint[3] = 0;
+	joint[4] = 89;
+	joint[5] = 89;
 	for (i = 0; i < 6; i++)
 	{
 		pre_joint[i] = joint[i];

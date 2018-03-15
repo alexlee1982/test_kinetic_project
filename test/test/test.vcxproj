@@ -87,7 +87,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pumakin-2.cpp" />
+    <ClCompile Include="pumakin-2-1switch.cpp" />
     <ClCompile Include="sincos.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="test.cpp" />

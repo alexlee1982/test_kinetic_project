@@ -1,1 +1,4 @@
-﻿
+﻿  test.cpp
+d:\documents\github\test_kinetic_project\test\test\test.cpp(25): warning C4101: “tran”: 未引用的局部变量
+  test.vcxproj -> D:\Documents\GitHub\test_kinetic_project\test\Debug\test.exe
+  test.vcxproj -> D:\Documents\GitHub\test_kinetic_project\test\Debug\test.pdb (Full PDB)

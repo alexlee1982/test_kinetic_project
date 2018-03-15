@@ -27,7 +27,7 @@
     <ClCompile Include="sincos.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="pumakin-2.cpp">
+    <ClCompile Include="pumakin-2-1switch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

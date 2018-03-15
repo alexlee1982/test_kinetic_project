@@ -515,10 +515,11 @@ int kinematicsInverse(RobotPose * world, PmHomogeneous* hom,
 	//double goal[8][6];//顺序存储八组解
 	//double testInverse[8][6];
 
-	double dsum[8] = { 0 }; //计算8组解的同前一组角度的误差
+	double dsum[32] = { 0 }; //计算8组解的同前一组角度的误差
 	int MN;
 	//	int err[8];	
 	unsigned char errFlag;
+	int optFlag = 0;
 	int skipFlag[8];
 	int Flag = 0;
 	double goal[32][6];
@@ -646,7 +647,23 @@ int kinematicsInverse(RobotPose * world, PmHomogeneous* hom,
 	}
 	
 
-
+	for (i = 0; i <32; i++)
+	{
+		dsum[i] = 0.0;
+		for (j = 0; j < 6; j++)
+		{
+			goal[i][j] = (goal[i][j]);
+			dsum[i] += (goal[i][j] - pre_joint[j])*(goal[i][j] - pre_joint[j]);
+		}
+		if (dsum[i] - dsum[optFlag]<0)
+		{
+			optFlag = i;
+		}
+	}
+	for (i = 0; i<6; i++)
+	{
+		joint[i] = goal[optFlag][i];
+	}
 	return 0;
 
 }
